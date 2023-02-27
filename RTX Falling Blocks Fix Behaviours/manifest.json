@@ -1,0 +1,35 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "RTX Falling Blocks Fix",
+		"description": "Behaviours for the RTX Falling Blocks Fix, designed by §6MADLAD3718§r.",
+		"uuid": "6a6f7eee-1405-4fb0-8dca-e99256580880",
+		"version": [1,0,0],
+		"min_engine_version": [1,17,30]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "2a69c7a5-41fa-4fbc-a7c8-efbd75ce89ea",
+			"version": [1,0,0]
+		},
+		{
+			"description": "Script that implements advanced custom falling block functionality.",
+			"type": "script",
+			"language": "javascript",
+			"uuid": "d1c60390-0abd-468e-8cc2-0e70066c2a62",
+			"version": [1,0,0],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"version": [1,0,0],
+			"uuid": "90301d08-898b-40a1-ab39-ed4d8ed3c1e5"
+		},
+		{
+			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+			"version": "1.1.0-beta"
+		}
+	]
+}

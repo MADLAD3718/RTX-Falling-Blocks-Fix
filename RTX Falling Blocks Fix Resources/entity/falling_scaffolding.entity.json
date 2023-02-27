@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "rtxfixes:falling_scaffolding",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/scaffolding"
+      },
+      "geometry": {
+        "default": "geometry.scaffolding"
+      },
+      "render_controllers": [ "controller.render.cow" ]
+    }
+  }
+} 

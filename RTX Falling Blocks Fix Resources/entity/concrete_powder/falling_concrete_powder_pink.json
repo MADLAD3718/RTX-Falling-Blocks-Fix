@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "rtxfixes:falling_concrete_powder_pink",
+      "materials": {
+        "default": "entity"
+      },
+      "textures": {
+        "default": "textures/blocks/concrete_powder_pink"
+      },
+      "geometry": {
+        "default": "geometry.cube"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+} 
