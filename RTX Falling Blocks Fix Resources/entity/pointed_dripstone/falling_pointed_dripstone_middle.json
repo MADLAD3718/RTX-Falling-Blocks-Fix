@@ -3,15 +3,9 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "rtxfixes:falling_pointed_dripstone_middle",
-      "materials": {
-        "default": "entity_alphatest"
-      },
-      "textures": {
-        "default": "textures/blocks/pointed_dripstone_down_middle"
-      },
-      "geometry": {
-        "default": "geometry.cross"
-      },
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/blocks/pointed_dripstone_down_middle" },
+      "geometry": { "default": "geometry.cross" },
       "render_controllers": [ "controller.render.default" ]
     }
   }

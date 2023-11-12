@@ -1,0 +1,74 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "rtxfixes:falling_green_concrete_powder",
+			"is_spawnable": false,
+			"is_summonable": true
+		},
+		"component_groups": {
+			"rtxfixes:despawn": { "minecraft:instant_despawn": {} }
+		},
+		"components": {
+			"minecraft:projectile": {
+				"gravity": 0.02,
+				"inertia": 0.98,
+				"liquid_inertia": 1.0
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [{
+					"filters": {
+						"all_of": [
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": "air"
+							},
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": "water"
+							},
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": "web"
+							},
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": "double_plant"
+							},
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": "tallgrass"
+							},
+							{
+								"test": "in_block",
+								"operator": "!=",
+								"value": ""
+							}
+						]
+					},
+					"event": "rtxfixes:despawn"
+				}]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"rtxfixes:despawn": {
+				"add": { "component_groups": ["rtxfixes:despawn"] }
+			}
+		}
+	}
+}

@@ -3,16 +3,10 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "rtxfixes:falling_snow_layer_7",
-      "materials": {
-        "default": "entity"
-      },
-      "textures": {
-        "default": "textures/blocks/snow"
-      },
-      "geometry": {
-        "default": "geometry.cube"
-      },
-      "render_controllers": [ "controller.render.cow" ]
+      "materials": { "default": "entity" },
+      "textures": { "default": "textures/blocks/snow" },
+      "geometry": { "default": "geometry.cube" },
+      "render_controllers": [ "controller.render.default" ]
     }
   }
 } 

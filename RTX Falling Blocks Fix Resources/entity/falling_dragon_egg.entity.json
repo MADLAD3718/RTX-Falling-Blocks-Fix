@@ -3,16 +3,10 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "rtxfixes:falling_dragon_egg",
-      "materials": {
-        "default": "entity"
-      },
-      "textures": {
-        "default": "textures/blocks/dragon_egg"
-      },
-      "geometry": {
-        "default": "geometry.dragon_egg"
-      },
-      "render_controllers": [ "controller.render.cow" ]
+      "materials": { "default": "entity" },
+      "textures": { "default": "textures/entity/dragon_egg" },
+      "geometry": { "default": "geometry.dragon_egg" },
+      "render_controllers": [ "controller.render.default" ]
     }
   }
 } 

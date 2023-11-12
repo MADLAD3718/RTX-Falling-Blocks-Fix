@@ -3,16 +3,10 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "rtxfixes:falling_sand",
-      "materials": {
-        "default": "entity"
-      },
-      "textures": {
-        "default": "textures/blocks/sand"
-      },
-      "geometry": {
-        "default": "geometry.cube"
-      },
-      "render_controllers": [ "controller.render.cow" ]
+      "materials": { "default": "entity" },
+      "textures": { "default": "textures/blocks/sand" },
+      "geometry": { "default": "geometry.cube" },
+      "render_controllers": [ "controller.render.default" ]
     }
   }
 } 

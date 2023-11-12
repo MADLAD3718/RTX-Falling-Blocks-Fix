@@ -3,15 +3,9 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "rtxfixes:falling_anvil_2",
-      "materials": {
-        "default": "entity"
-      },
-      "textures": {
-        "default": "textures/entity/anvils/very_damaged"
-      },
-      "geometry": {
-        "default": "geometry.anvil"
-      },
+      "materials": { "default": "entity" },
+      "textures": { "default": "textures/entity/anvils/very_damaged" },
+      "geometry": { "default": "geometry.anvil" },
       "render_controllers": [ "controller.render.default" ]
     }
   }
