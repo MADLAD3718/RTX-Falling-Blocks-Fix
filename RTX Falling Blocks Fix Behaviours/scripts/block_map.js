@@ -44,6 +44,12 @@ world.afterEvents.entitySpawn.subscribe(event => {
     const block_location = floor(add(location, Directions.Up));
     logSurroundingBlocks(dimension.getBlock(block_location));
 });
+world.beforeEvents.explosion.subscribe(event => {
+    for (const block of event.getImpactedBlocks()) {
+        logBlock(block);
+        logSurroundingBlocks(block);
+    }
+});
 
 /**
  * Logs a falling block to the block map.
