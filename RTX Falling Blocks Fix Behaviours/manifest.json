@@ -1,8 +1,9 @@
 {
 	"format_version": 2,
+	"metadata": { "authors": ["MADLAD3718"] },
 	"header": {
-		"name": "RTX Falling Blocks Fix",
-		"description": "Behaviours for the RTX Falling Blocks Fix, designed by §6MADLAD3718§r.",
+		"name": "Falling Blocks RTX",
+		"description": "An addon that fixes falling block visibility with RTX.",
 		"uuid": "6a6f7eee-1405-4fb0-8dca-e99256580880",
 		"version": [1,5,0],
 		"min_engine_version": [1,20,40]
