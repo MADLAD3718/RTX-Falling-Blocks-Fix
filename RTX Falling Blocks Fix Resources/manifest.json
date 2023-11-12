@@ -3,7 +3,7 @@
 	"metadata": { "authors": ["MADLAD3718"] },
 	"header": {
 		"name": "Falling Blocks RTX",
-		"description": "An addon that fixes falling block visibility with RTX.",
+		"description": "An addon that fixes falling block visibility with RTX.\nRequired Experiments: §aBeta APIs§r\nDesigned by: §6MADLAD3718§r",
 		"uuid": "90301d08-898b-40a1-ab39-ed4d8ed3c1e5",
 		"version": [1,5,0],
 		"min_engine_version": [1,20,40]
