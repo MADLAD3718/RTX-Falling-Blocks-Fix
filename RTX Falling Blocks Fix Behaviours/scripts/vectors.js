@@ -20,6 +20,22 @@ export const Directions = {
 }
 
 /**
+ * Returns a vector corresponding with a piston direction.
+ * @param {Number} direction 
+ * @returns {Vector3}
+ */
+export function pistonDirectionToVector(direction) {
+    switch (direction) {
+        case 0: return Directions.Down;
+        case 1: return Directions.Up;
+        case 2: return Directions.South;
+        case 3: return Directions.North;
+        case 4: return Directions.East;
+        case 5: return Directions.West;
+    }
+}
+
+/**
  * Stringifies the given vector.
  * @param {Vector3} v 
  * @returns {String}

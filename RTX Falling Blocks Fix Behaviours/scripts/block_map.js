@@ -1,5 +1,5 @@
 import { Block, world } from "@minecraft/server";
-import { Directions, add, floor, stringifyVec } from "./vectors";
+import { Directions, add, floor, pistonDirectionToVector, stringifyVec, sub } from "./vectors";
 
 const falling_blocks = [
     "minecraft:sand",
@@ -48,6 +48,16 @@ world.beforeEvents.explosion.subscribe(event => {
     for (const block of event.getImpactedBlocks()) {
         logBlock(block);
         logSurroundingBlocks(block);
+    }
+});
+world.beforeEvents.pistonActivate.subscribe(event => {
+    for (const location of event.piston.getAttachedBlocks()) {
+        const block = event.dimension.getBlock(location);
+        logSurroundingBlocks(block);
+        if (!falling_blocks.includes(block.typeId)) continue;
+        const direction = pistonDirectionToVector(event.block.permutation.getState("facing_direction"));
+        const position = event.isExpanding ? add(location, direction) : sub(location, direction);
+        BlockMap.set(stringifyVec(position), getFallingBlockId(block));
     }
 });
 
