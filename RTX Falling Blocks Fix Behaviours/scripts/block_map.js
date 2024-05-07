@@ -50,16 +50,16 @@ world.beforeEvents.explosion.subscribe(event => {
         logSurroundingBlocks(block);
     }
 });
-world.beforeEvents.pistonActivate.subscribe(event => {
-    for (const location of event.piston.getAttachedBlocks()) {
-        const block = event.dimension.getBlock(location);
-        logSurroundingBlocks(block);
-        if (!falling_blocks.includes(block.typeId)) continue;
-        const direction = pistonDirectionToVector(event.block.permutation.getState("facing_direction"));
-        const position = event.isExpanding ? add(location, direction) : sub(location, direction);
-        BlockMap.set(stringifyVec(position), getFallingBlockId(block));
-    }
-});
+// world.beforeEvents.pistonActivate.subscribe(event => {
+//     for (const location of event.piston.getAttachedBlocks()) {
+//         const block = event.dimension.getBlock(location);
+//         logSurroundingBlocks(block);
+//         if (!falling_blocks.includes(block.typeId)) continue;
+//         const direction = pistonDirectionToVector(event.block.permutation.getState("facing_direction"));
+//         const position = event.isExpanding ? add(location, direction) : sub(location, direction);
+//         BlockMap.set(stringifyVec(position), getFallingBlockId(block));
+//     }
+// });
 
 /**
  * Logs a falling block to the block map.
