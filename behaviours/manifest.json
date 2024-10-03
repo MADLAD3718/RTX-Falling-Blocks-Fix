@@ -3,10 +3,10 @@
 	"metadata": { "authors": ["MADLAD3718"] },
 	"header": {
 		"name": "Falling Blocks RTX",
-		"description": "An addon that fixes falling block visibility with RTX.\nRequired Experiments: §aBeta APIs§r\nDesigned by: §6MADLAD3718§r",
+		"description": "An addon that fixes falling block visibility with RTX.\nDesigned by: §6MADLAD3718§r",
 		"uuid": "6a6f7eee-1405-4fb0-8dca-e99256580880",
 		"version": [1,5,0],
-		"min_engine_version": [1,20,40]
+		"min_engine_version": [1,21,30]
 	},
 	"modules": [
 		{
@@ -30,7 +30,7 @@
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.11.0-beta"
+			"version": "1.14.0"
 		}
 	]
 }

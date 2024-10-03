@@ -1,5 +1,5 @@
 import { Block, world } from "@minecraft/server";
-import { Directions, add, floor, pistonDirectionToVector, stringifyVec, sub } from "./vectors";
+import { Directions, add, floor, stringifyVec } from "./vectors";
 
 const falling_blocks = [
     "minecraft:sand",
