@@ -1,5 +1,3 @@
-import { PropertyOutOfBoundsError } from "@minecraft/common";
-
 import { EntitySpawnAfterEvent, world } from "@minecraft/server";
 import { Unit, add, floor, stringifyVec } from "./extensions/vectors";
 import { BlockMap } from "./block_map";
