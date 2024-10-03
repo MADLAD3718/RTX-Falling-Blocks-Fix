@@ -1,2 +1,3 @@
 *.mcaddon
 .vscode
+node_modules

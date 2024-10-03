@@ -1,13 +1,3 @@
-export class Vec3 {
-    static from(x, y, z) {
-        return {
-            x: x,
-            y: y,
-            z: z
-        };
-    }
-}
-
 export const Unit = Object.freeze({
     Up: { x: 0, y: 1, z: 0 },
     Down: { x: 0, y: -1, z: 0 },
@@ -60,12 +50,11 @@ export function all(v) {
 }
 
 export function isnan(v) {
-    return v.x == NaN || v.y == NaN || v.z == NaN;
+    return Number.isNaN(v.x) || Number.isNaN(v.y) || Number.isNaN(v.z);
 }
 
 export function isinf(v) {
-    v = abs(v);
-    return v.x == Infinity || v.y == Infinity || v.z == Infinity;
+    return !(Number.isFinite(v.x) && Number.isFinite(v.y) && Number.isFinite(v.z));
 }
 
 export function isfinite(v) {
