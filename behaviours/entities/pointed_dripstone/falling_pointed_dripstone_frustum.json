@@ -2,12 +2,12 @@
 	"format_version": "1.20.40",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "rtxfixes:falling_pointed_dripstone_frustum",
+			"identifier": "rtx:falling_pointed_dripstone_frustum",
 			"is_spawnable": false,
 			"is_summonable": true
 		},
 		"component_groups": {
-			"rtxfixes:despawn": { "minecraft:instant_despawn": {} }
+			"rtx:despawn": { "minecraft:instant_despawn": {} }
 		},
 		"components": {
 			"minecraft:projectile": {
@@ -51,7 +51,7 @@
 							}
 						]
 					},
-					"event": "rtxfixes:despawn"
+					"event": "rtx:despawn"
 				}]
 			},
 			"minecraft:damage_sensor": {
@@ -70,8 +70,8 @@
 			}
 		},
 		"events": {
-			"rtxfixes:despawn": {
-				"add": { "component_groups": ["rtxfixes:despawn"] }
+			"rtx:despawn": {
+				"add": { "component_groups": ["rtx:despawn"] }
 			}
 		}
 	}

@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_red_sand",
+      "identifier": "rtx:falling_red_sand",
       "materials": { "default": "entity" },
       "textures": { "default": "textures/blocks/red_sand" },
       "geometry": { "default": "geometry.cube" },

@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_gravel",
+      "identifier": "rtx:falling_gravel",
       "materials": { "default": "entity" },
       "textures": { "default": "textures/blocks/gravel" },
       "geometry": { "default": "geometry.cube" },

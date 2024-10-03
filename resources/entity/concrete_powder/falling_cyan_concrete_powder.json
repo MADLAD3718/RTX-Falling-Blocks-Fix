@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_cyan_concrete_powder",
+      "identifier": "rtx:falling_cyan_concrete_powder",
       "materials": { "default": "entity" },
       "textures": { "default": "textures/blocks/concrete_powder_cyan" },
       "geometry": { "default": "geometry.cube" },

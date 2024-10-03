@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_pointed_dripstone_middle",
+      "identifier": "rtx:falling_pointed_dripstone_middle",
       "materials": { "default": "entity_alphatest" },
       "textures": { "default": "textures/blocks/pointed_dripstone_down_middle" },
       "geometry": { "default": "geometry.cross" },

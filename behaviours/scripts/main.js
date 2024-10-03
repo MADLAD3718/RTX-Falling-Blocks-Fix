@@ -1,6 +1,6 @@
 import { EntitySpawnAfterEvent, world } from "@minecraft/server";
-import { BlockMap } from "./block_map";
 import { Directions, add, floor, stringifyVec } from "./vectors";
+import { BlockMap } from "./block_map";
 
 world.afterEvents.entitySpawn.subscribe(fallingBlockSpawn);
 
@@ -9,11 +9,11 @@ world.afterEvents.entitySpawn.subscribe(fallingBlockSpawn);
  * @param {EntitySpawnAfterEvent} event 
  */
 function fallingBlockSpawn(event) {
-    const {entity} = event;
+    const { entity } = event;
     if (!entity.isValid() || entity.typeId != "minecraft:falling_block") return;
-    const {dimension, location} = entity;
+    const { dimension, location } = entity;
     const key = stringifyVec(floor(add(location, Directions.Up)));
     if (!BlockMap.has(key)) return;
-    dimension.spawnEntity(BlockMap.get(key), location).applyImpulse({x: 0, y: -0.1, z: 0});
+    dimension.spawnEntity(BlockMap.get(key), location).applyImpulse({ x: 0, y: -0.1, z: 0 });
     BlockMap.delete(key);
 }

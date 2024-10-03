@@ -2,12 +2,12 @@
 	"format_version": "1.20.40",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "rtxfixes:falling_dragon_egg",
+			"identifier": "rtx:falling_dragon_egg",
 			"is_spawnable": false,
 			"is_summonable": true
 		},
 		"component_groups": {
-			"rtxfixes:despawn": { "minecraft:instant_despawn": {} }
+			"rtx:despawn": { "minecraft:instant_despawn": {} }
 		},
 		"components": {
 			"minecraft:projectile": {
@@ -41,7 +41,7 @@
 							}
 						]
 					},
-					"event": "rtxfixes:despawn_event"
+					"event": "rtx:despawn_event"
 				}]
 			},
 			"minecraft:damage_sensor": {
@@ -60,8 +60,8 @@
 			}
 		},
 		"events": {
-			"rtxfixes:despawn_event": {
-				"add": { "component_groups": ["rtxfixes:despawn"] }
+			"rtx:despawn_event": {
+				"add": { "component_groups": ["rtx:despawn"] }
 			}
 		}
 	}

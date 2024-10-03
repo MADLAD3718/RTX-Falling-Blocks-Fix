@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_dragon_egg",
+      "identifier": "rtx:falling_dragon_egg",
       "materials": { "default": "entity" },
       "textures": { "default": "textures/entity/dragon_egg" },
       "geometry": { "default": "geometry.dragon_egg" },

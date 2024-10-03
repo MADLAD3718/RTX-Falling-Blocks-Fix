@@ -1,5 +1,5 @@
+import { add, floor, Unit } from "./extensions/vectors";
 import { Block, world } from "@minecraft/server";
-import { Directions, add, floor, stringifyVec } from "./vectors";
 
 const falling_blocks = [
     "minecraft:sand",
@@ -38,10 +38,10 @@ world.afterEvents.playerPlaceBlock.subscribe(event => {
     logSurroundingBlocks(event.block);
 });
 world.afterEvents.entitySpawn.subscribe(event => {
-    const {entity} = event;
+    const { entity } = event;
     if (!entity.isValid() || entity.typeId != "minecraft:falling_block") return;
-    const {location, dimension} = entity;
-    const block_location = floor(add(location, Directions.Up));
+    const { location, dimension } = entity;
+    const block_location = floor(add(location, Unit.Up));
     logSurroundingBlocks(dimension.getBlock(block_location));
 });
 world.beforeEvents.explosion.subscribe(event => {
@@ -66,12 +66,11 @@ world.beforeEvents.explosion.subscribe(event => {
  * @param {Block} block
  */
 function logBlock(block) {
-    if (!falling_blocks.includes(block.typeId)) return;
-    BlockMap.set(stringifyVec(block.location), getFallingBlockId(block));
-    if (block.typeId == "minecraft:pointed_dripstone") {
-        const {location, dimension} = block;
-        if (location.y > dimension.heightRange.min) logBlock(block.below());
-    }
+    const { typeId, location, dimension } = block, { heightRange } = dimension;
+    if (!falling_blocks.includes(typeId)) return;
+    BlockMap.set(stringifyVec(location), getFallingBlockId(block));
+    if (typeId == "minecraft:pointed_dripstone" &&
+        location.y > heightRange.min) logBlock(block.below());
 }
 
 /**
@@ -83,9 +82,9 @@ function logSurroundingBlocks(block) {
     logBlock(block.south());
     logBlock(block.east());
     logBlock(block.west());
-    const {location, dimension} = block;
-    if (location.y < dimension.heightRange.max) logBlock(block.above());
-    if (location.y > dimension.heightRange.min) logBlock(block.below());
+    const { location, dimension } = block, { heightRange } = dimension;
+    if (location.y < heightRange.max) logBlock(block.above());
+    if (location.y > heightRange.min) logBlock(block.below());
 }
 
 /**
@@ -94,23 +93,21 @@ function logSurroundingBlocks(block) {
  * @returns {String}
  */
 function getFallingBlockId(block) {
-    const {permutation} = block;
-    switch (block.typeId) {
+    const { permutation, typeId } = block;
+    const states = permutation.getAllStates();
+    switch (typeId) {
         case 'minecraft:snow_layer':
-            return "rtxfixes:falling_snow_layer_" + permutation.getState("height");
+            return "rtx:falling_snow_layer_" + states["height"];
         case "minecraft:anvil":
-            let id = "rtxfixes:falling_anvil";
-            const damage = permutation.getState("damage");
+            let id = "rtx:falling_anvil";
+            const damage = states["damage"];
             id += damage == "slightly_damaged" ? '_1' : damage == "very_damaged" ? '_2' : '_0';
-            const direction = permutation.getState("minecraft:cardinal_direction");
+            const direction = states["minecraft:cardinal_direction"];
             if (direction == "north" || direction == "south") id += '_rotated';
             return id;
         case "minecraft:pointed_dripstone":
-            const state = permutation.getState("dripstone_thickness");
-            return "rtxfixes:falling_pointed_dripstone_" + (state == "merge" ? "tip" : state);
-        case "minecraft:sand":
-            if (permutation.getState("sand_type") == "red")
-                return "rtxfixes:falling_red_sand";
-        default: return "rtxfixes:falling_" + block.typeId.slice(10);
+            const thickness = states["dripstone_thickness"];
+            return "rtx:falling_pointed_dripstone_" + (thickness == "merge" ? "tip" : thickness);
+        default: return "rtx:falling_" + block.typeId.slice(10);
     }
 }

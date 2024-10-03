@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_pointed_dripstone_frustum",
+      "identifier": "rtx:falling_pointed_dripstone_frustum",
       "materials": { "default": "entity_alphatest" },
       "textures": { "default": "textures/blocks/pointed_dripstone_down_frustum" },
       "geometry": { "default": "geometry.cross" },

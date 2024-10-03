@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtxfixes:falling_snow_layer_0",
+      "identifier": "rtx:falling_snow_layer_0",
       "materials": { "default": "entity" },
       "textures": { "default": "textures/blocks/snow" },
       "geometry": { "default": "geometry.snow_layer_0" },
