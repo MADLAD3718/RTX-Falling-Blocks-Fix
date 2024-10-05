@@ -1,4 +1,4 @@
-import { add, floor, Unit } from "./extensions/vectors";
+import { add, floor, stringifyVec, Unit } from "./extensions/vectors";
 import { Block, world } from "@minecraft/server";
 
 const falling_blocks = [
