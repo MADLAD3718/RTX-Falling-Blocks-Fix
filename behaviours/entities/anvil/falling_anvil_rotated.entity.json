@@ -2,7 +2,7 @@
 	"format_version": "1.20.40",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "rtx:falling_anvil_0",
+			"identifier": "rtx:falling_anvil_rotated",
 			"is_spawnable": false,
 			"is_summonable": true
 		},

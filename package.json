@@ -1,0 +1,19 @@
+{
+  "name": "rtx-falling-blocks-fix",
+  "version": "1.0.0",
+  "description": "A Minecraft addon that creates visible dummy falling blocks to account for the invisible vanilla falling blocks when using RTX.",
+  "main": "behaviours/scripts/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node esbuild"
+  },
+  "author": "MADLAD3718",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "dependencies": {
+    "@madlad3718/mcvec3": "^0.1.1",
+    "@minecraft/server": "^1.14.0"
+  }
+}

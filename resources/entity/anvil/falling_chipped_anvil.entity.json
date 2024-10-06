@@ -2,10 +2,10 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtx:falling_anvil_2_rotated",
+      "identifier": "rtx:falling_chipped_anvil",
       "materials": { "default": "entity" },
-      "textures": { "default": "textures/entity/anvils/very_damaged" },
-      "geometry": { "default": "geometry.anvil_rotate" },
+      "textures": { "default": "textures/entity/anvils/slightly_damaged" },
+      "geometry": { "default": "geometry.anvil" },
       "render_controllers": [ "controller.render.default" ]
     }
   }

@@ -2,10 +2,10 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "rtx:falling_anvil_1",
+      "identifier": "rtx:falling_damaged_anvil_rotated",
       "materials": { "default": "entity" },
-      "textures": { "default": "textures/entity/anvils/slightly_damaged" },
-      "geometry": { "default": "geometry.anvil" },
+      "textures": { "default": "textures/entity/anvils/very_damaged" },
+      "geometry": { "default": "geometry.anvil_rotate" },
       "render_controllers": [ "controller.render.default" ]
     }
   }
