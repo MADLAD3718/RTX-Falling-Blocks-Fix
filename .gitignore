@@ -1,3 +1,4 @@
 *.mcaddon
 .vscode
 node_modules
+behaviours/scripts

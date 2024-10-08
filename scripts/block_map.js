@@ -3,6 +3,7 @@ import { Vec3 } from "@madlad3718/mcvec3";
 
 const falling_blocks = [
     "minecraft:sand",
+    "minecraft:red_sand",
     "minecraft:gravel",
     "minecraft:anvil",
     "minecraft:chipped_anvil",

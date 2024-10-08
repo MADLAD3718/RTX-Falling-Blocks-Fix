@@ -13,7 +13,7 @@ const external = [
 
 esbuild
     .build({
-        entryPoints: ["src/main.js"],
+        entryPoints: ["scripts/main.js"],
         outfile: "behaviours/scripts/main.js",
         bundle: true,
         format: "esm",
